@@ -1,0 +1,59 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0; padding: 20px; text-align: center; padding-bottom: 100px;
+}
+header h1 { color: #2c3e50; margin-bottom: 5px; }
+#date-jour { color: #7f8c8d; margin-top: 0; margin-bottom: 20px; font-weight: bold; }
+
+.tabs { margin-bottom: 20px; display: flex; justify-content: center; gap: 10px; }
+.tab-link {
+    background-color: #ecf0f1; border: 2px solid #bdc3c7; padding: 12px 20px;
+    font-size: 16px; cursor: pointer; border-radius: 25px; font-weight: bold; color: #7f8c8d;
+}
+.tab-link.active { background-color: #2980b9; color: white; border-color: #2980b9; }
+
+.tab-content {
+    display: none; background: white; padding: 15px; border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); max-width: 600px; margin: 0 auto;
+}
+
+.scout-list { list-style-type: none; padding: 0; }
+.scout-list li {
+    padding: 10px 15px; margin: 10px 0; background-color: #f8f9fa;
+    border: 1px solid #e9ecef; border-radius: 8px; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 18px; color: #34495e; user-select: none;
+}
+.scout-list li.present { background-color: #d4edda; border-color: #c3e6cb; color: #155724; font-weight: bold; }
+.scout-list li.present .nom-eleve::after { content: " ✅"; }
+
+.nom-eleve { flex-grow: 1; text-align: left; }
+.item-actions { display: flex; gap: 10px; }
+
+.btn-mini { background: none; border: none; font-size: 1.2em; cursor: pointer; opacity: 0.6; padding: 5px; }
+.btn-mini:hover { opacity: 1; transform: scale(1.1); }
+
+.btn-info { background: none; border: none; font-size: 1.2em; cursor: pointer; opacity: 0.8; padding: 5px; margin-right: 5px; }
+.btn-info:hover { transform: scale(1.2); }
+
+.actions { margin-top: 40px; margin-bottom: 60px; }
+.btn-save { background-color: #e67e22; color: white; border: none; padding: 15px 30px; font-size: 18px; border-radius: 50px; cursor: pointer; font-weight: bold; }
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6); z-index: 1000;
+    display: flex; justify-content: center; align-items: center;
+}
+.modal-content {
+    background-color: white; padding: 25px; border-radius: 15px;
+    width: 90%; max-width: 400px; text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative; animation: slideDown 0.3s ease-out;
+}
+@keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.close-btn { position: absolute; top: 10px; right: 15px; font-size: 28px; cursor: pointer; color: #aaa; }
+.modal-body p { margin: 15px 0; font-size: 16px; border-bottom: 1px solid #eee; padding-bottom: 8px;}
+.modal-footer { text-align: center; margin-top: 20px; }
+.modal-footer button { padding: 10px 20px; border: none; border-radius: 5px; color: white; cursor: pointer;}
