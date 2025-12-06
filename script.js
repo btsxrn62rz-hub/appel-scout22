@@ -1,4 +1,6 @@
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbylDOZOcMB7SqQ3aMR3skS6AfJrLMVVGqsrujHFsU4LyWsqnErr9qNiOP8KMEhB8cKr/exec"; 
+// --- URL DE DÉPLOIEMENT DE TEST (VOTRE NOUVELLE URL) ---
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxP03uUHflaHuKAM4RuxDyBRq11k9lSUjd54PFBkZOwOGSlJKNV3c9SQYSaLj9IBbLYNQ/exec"; 
+// ---------------------------------------------------------
 
 let louveteaux = [];
 let eclaireurs = [];
